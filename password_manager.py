@@ -28,7 +28,7 @@ class PasswordManager:
             print(f"Password Verification Successful for user '{username}'.")
             return True
         else:
-            if kwargs["debug"]:
+            if kwargs.get("debug"):
                 print(f"'{input_password}' is not the correct Password for user '{username}'.")
             return False
 
